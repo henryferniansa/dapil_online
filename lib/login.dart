@@ -1,3 +1,4 @@
+import 'package:dapil_online/masuk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +11,6 @@ class LoginScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
       return Scaffold(
-        backgroundColor: Color(0xffDFE6F0),
         body: Column(
           children: [
             Container(
@@ -78,9 +78,7 @@ class LoginScreen extends StatelessWidget{
                           ),
                         )],
                         fontWeight: FontWeight.bold
-
                       ),
-
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -139,7 +137,10 @@ class LoginScreen extends StatelessWidget{
                     height: 60,
 
                     child: TextButton(
-                        onPressed: (){}, child: Text('Masuk'),
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => const LoginForm()));},
+                      child: Text('Masuk'),
                     style: ButtonStyle(
                       backgroundColor: MaterialStatePropertyAll(Colors.white),
                       foregroundColor: MaterialStatePropertyAll(Colors.black),
@@ -153,7 +154,6 @@ class LoginScreen extends StatelessWidget{
                 ],
               ),
             ),
-            Container(),
           ],
         ),
       );

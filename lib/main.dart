@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Arial',
+        scaffoldBackgroundColor: Color(0xffDFE6F0)
       ),
       home: LoginScreen() ,
     );
