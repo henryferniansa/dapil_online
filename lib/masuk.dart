@@ -1,5 +1,6 @@
 
 
+import 'package:dapil_online/UserLobby/Beranda.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget{
@@ -93,10 +94,11 @@ class LoginForm extends StatelessWidget{
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
                         minimumSize: MaterialStatePropertyAll(Size(170, 70))
                     ),
-                    onPressed: () { },
+                    onPressed: () { Navigator.pushReplacement( context,
+                        MaterialPageRoute(builder: (context) => const BerandaUser()));},
                     child: Text('Masuk',
                       style: TextStyle(
-                          fontSize: 16
+                          fontSize: 16,
                       ),)
                 ),
               ),

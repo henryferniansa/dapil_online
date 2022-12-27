@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dapil_online/login.dart';
 import 'package:flutter/services.dart';
+import 'package:dapil_online/UserLobby/Beranda.dart';
 void main() {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
   runApp(const MyApp());
@@ -16,9 +17,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Arial',
-        scaffoldBackgroundColor: Color(0xffDFE6F0)
+        scaffoldBackgroundColor: const Color(0xffDFE6F0)
       ),
-      home: LoginScreen() ,
+      initialRoute: '/',
+      routes: {
+        '/BerandaUser': (context) => const BerandaUser()
+      },
+      home: const LoginScreen() ,
     );
   }
 }
