@@ -1,7 +1,10 @@
 
+import 'package:dapil_online/screens/dapil_screen.dart';
 import 'package:flutter/material.dart';
 
 class Katalog extends StatefulWidget{
+  const Katalog({super.key});
+
 
   @override
   State<Katalog> createState() => _KatalogState();
@@ -13,9 +16,9 @@ class _KatalogState extends State<Katalog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff65A7E1),
+      backgroundColor: const Color(0xff65A7E1),
       body: Padding(
-        padding: EdgeInsets.only(top: 40),
+        padding: const EdgeInsets.only(top: 40),
         child: Center(
 
           child: Column(
@@ -29,7 +32,7 @@ class _KatalogState extends State<Katalog> {
                   color: Colors.white
                 ),
 
-                child: Center(child: Text('Calon Anggota Legislatif',
+                child: const Center(child: Text('Calon Anggota Legislatif',
                   style: TextStyle(
                       color: Color(0xff65A7E1),
                       fontSize: 16,
@@ -38,7 +41,7 @@ class _KatalogState extends State<Katalog> {
                 )),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 height: 40,
                 width: 230,
                 decoration: BoxDecoration(
@@ -50,12 +53,12 @@ class _KatalogState extends State<Katalog> {
                     child: SizedBox(
                       width: 220,
                       child: DropdownButton<String>(
-                        underline: SizedBox(),
+                        underline: const SizedBox(),
                         value : selectedItem,
                         items : items
                             .map((item) => DropdownMenuItem<String>(
                             value: item,
-                            child: Text(item, style: TextStyle(fontSize: 12, color: Color(0xff65A7E1))),
+                            child: Text(item, style: const TextStyle(fontSize: 12, color: Color(0xff65A7E1))),
                         )).toList(),onChanged: (item) => setState(() => selectedItem=item),
                       ),
                     )
@@ -86,55 +89,27 @@ class _KatalogState extends State<Katalog> {
                               ),
                               Container(
                                 height: 60,
-                                margin: EdgeInsets.only(top: 5),
+                                margin: const EdgeInsets.only(top: 5),
                                 width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                    style : TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                            ]
-                        )
-                    ),
-                    onPressed: (){},
-                  ),
-                  TextButton(
-                    child: Container(
-                        padding: const EdgeInsets.only(right: 10, left: 10, top : 5),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                        ),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children:[
-                              Image.asset('assets/images/pp.png',
-                                height: 100,
-                                width: 100,
-                              ),
-                              Container(
-                                height: 60,
-                                margin: EdgeInsets.only(top: 5),
-                                width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                      style : TextStyle(
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
                                           fontSize: 14,
                                           color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
                                       ),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ]
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
                   ),
                   TextButton(
                     child: Container(
@@ -152,22 +127,27 @@ class _KatalogState extends State<Katalog> {
                               ),
                               Container(
                                 height: 60,
-                                margin: EdgeInsets.only(top: 5),
+                                margin: const EdgeInsets.only(top: 5),
                                 width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                    style : TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                  ],
                                 ),
                               ),
                             ]
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
                   ),
                   TextButton(
                     child: Container(
@@ -185,22 +165,27 @@ class _KatalogState extends State<Katalog> {
                               ),
                               Container(
                                 height: 60,
-                                margin: EdgeInsets.only(top: 5),
+                                margin: const EdgeInsets.only(top: 5),
                                 width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                    style : TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                  ],
                                 ),
                               ),
                             ]
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
                   ),
                   TextButton(
                     child: Container(
@@ -218,22 +203,27 @@ class _KatalogState extends State<Katalog> {
                               ),
                               Container(
                                 height: 60,
-                                margin: EdgeInsets.only(top: 5),
+                                margin: const EdgeInsets.only(top: 5),
                                 width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                    style : TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                  ],
                                 ),
                               ),
                             ]
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
                   ),
                   TextButton(
                     child: Container(
@@ -251,22 +241,65 @@ class _KatalogState extends State<Katalog> {
                               ),
                               Container(
                                 height: 60,
-                                margin: EdgeInsets.only(top: 5),
+                                margin: const EdgeInsets.only(top: 5),
                                 width: 100,
-                                child: Expanded(
-                                  child: const Text('Syamsul Arif Dapil Wilayah X',
-                                    style : TextStyle(
-                                      fontSize: 14,
-                                      color: Colors.black,
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
                                     ),
-                                    textAlign: TextAlign.center,
-                                  ),
+                                  ],
                                 ),
                               ),
                             ]
                         )
                     ),
-                    onPressed: (){},
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
+                  ),
+                  TextButton(
+                    child: Container(
+                        padding: const EdgeInsets.only(right: 10, left: 10, top : 5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                        ),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children:[
+                              Image.asset('assets/images/pp.png',
+                                height: 100,
+                                width: 100,
+                              ),
+                              Container(
+                                height: 60,
+                                margin: const EdgeInsets.only(top: 5),
+                                width: 100,
+                                child: Row(
+                                  children: [
+                                    const Expanded(
+                                      child: Text('Syamsul Arif Dapil Wilayah X',
+                                        style : TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.black,
+                                        ),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ]
+                        )
+                    ),
+                    onPressed: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const DapilScreen()));},
                   ),
                 ],
               ),

@@ -12,40 +12,35 @@ class DaftarScreen extends StatelessWidget{
       child: Scaffold(
         resizeToAvoidBottomInset : false,
         appBar: AppBar(
-          title: Text('Daftar'),
+          title: const Text('Daftar'),
         ),
         body: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 40),
+                margin: const EdgeInsets.only(top: 40),
                 width: 300,
                 height: 100,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Nama',
+                    const Text('Nama',
                     style: TextStyle(
                       fontWeight: FontWeight.bold
                     ),),
-                    Container(
-                      width: 300,
-                      height: 40,
-                      margin: EdgeInsets.only(top: 10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(40),
-                          color: Colors.white
+                    TextFormField(
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric( horizontal: 10),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                        filled: true,
+                        fillColor: Colors.white,
                       ),
-                      child: TextFormField(
-                        decoration: const InputDecoration(
-                            border: InputBorder.none,
-                            focusedBorder: InputBorder.none,
-                            enabledBorder: InputBorder.none,
-                            errorBorder: InputBorder.none,
-                            disabledBorder: InputBorder.none,
-                        ),
+                      style: TextStyle(
+
                       ),
+
                     ),
                   ],
                 ),
@@ -56,14 +51,14 @@ class DaftarScreen extends StatelessWidget{
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Password',
+                    const Text('Password',
                       style: TextStyle(
                           fontWeight: FontWeight.bold
                       ),),
                     Container(
                       width: 300,
                       height: 40,
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white
@@ -87,14 +82,14 @@ class DaftarScreen extends StatelessWidget{
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Konfirmasi Password',
+                    const Text('Konfirmasi Password',
                       style: TextStyle(
                           fontWeight: FontWeight.bold
                       ),),
                     Container(
                       width: 300,
                       height: 40,
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white
@@ -118,14 +113,14 @@ class DaftarScreen extends StatelessWidget{
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('NIK',
+                    const Text('NIK',
                       style: TextStyle(
                           fontWeight: FontWeight.bold
                       ),),
                     Container(
                       width: 300,
                       height: 40,
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white
@@ -149,14 +144,14 @@ class DaftarScreen extends StatelessWidget{
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Domisili',
+                    const Text('Domisili',
                       style: TextStyle(
                           fontWeight: FontWeight.bold
                       ),),
                     Container(
                       width: 300,
                       height: 40,
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(40),
                           color: Colors.white
@@ -175,7 +170,7 @@ class DaftarScreen extends StatelessWidget{
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 20),
                 width: 150,
                 height: 50,
                 decoration: BoxDecoration(
@@ -186,7 +181,7 @@ class DaftarScreen extends StatelessWidget{
                   onPressed: ()=> showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
-                      backgroundColor: Color(0xff65A7E1),
+                      backgroundColor: const Color(0xff65A7E1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)
                       ),
@@ -199,8 +194,8 @@ class DaftarScreen extends StatelessWidget{
                                 height: 200,
                                 child: Image.asset('assets/images/check 1.png')),
                             Container(
-                              margin: EdgeInsets.only(top: 20, bottom: 20),
-                              child: Text('Selamat Pendaftaran Anda Berhasil',
+                              margin: const EdgeInsets.only(top: 20, bottom: 20),
+                              child: const Text('Selamat Pendaftaran Anda Berhasil',
                               style: TextStyle(
                                 fontSize: 16
                               ),),
@@ -220,7 +215,7 @@ class DaftarScreen extends StatelessWidget{
                                 ),
                                 onPressed: (){Navigator.push(context, MaterialPageRoute(
                                     builder: (context) => const LoginForm()));},
-                                child: Text('Masuk'),
+                                child: const Text('Masuk'),
                               ),
                             )
                           ],

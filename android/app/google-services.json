@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973053357346",
+    "project_id": "dapilauth",
+    "storage_bucket": "dapilauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973053357346:android:d43349f3a61015f50a897b",
+        "android_client_info": {
+          "package_name": "com.example.dapil_online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973053357346-b4v376cmalp827mvrln2rni7d98kkcef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgkMNmUyo9mlbcqzb_YgRVK6htII_Dq9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973053357346-b4v376cmalp827mvrln2rni7d98kkcef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

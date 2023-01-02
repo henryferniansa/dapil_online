@@ -11,7 +11,7 @@ class LoginForm extends StatelessWidget{
     return GestureDetector(
       onTap: ()=>FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
-        backgroundColor: Color(0xFFDFE6F0),
+        backgroundColor: const Color(0xFFDFE6F0),
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
           backgroundColor: const Color(0xFFDFE6F0),
@@ -76,7 +76,7 @@ class LoginForm extends StatelessWidget{
 
 
                     ),
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.green,
                         fontSize: 16
                     ),
@@ -86,17 +86,16 @@ class LoginForm extends StatelessWidget{
             ),
             Center(
               child: Padding(
-                padding: EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(top: 60),
                 child: ElevatedButton(
                     style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Colors.white),
-                        foregroundColor: MaterialStatePropertyAll(Colors.black),
+                        backgroundColor: const MaterialStatePropertyAll(Colors.white),
+                        foregroundColor: const MaterialStatePropertyAll(Colors.black),
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
-                        minimumSize: MaterialStatePropertyAll(Size(170, 70))
+                        minimumSize: const MaterialStatePropertyAll(Size(170, 70))
                     ),
-                    onPressed: () { Navigator.pushReplacement( context,
-                        MaterialPageRoute(builder: (context) => const BerandaUser()));},
-                    child: Text('Masuk',
+                    onPressed: () {},
+                    child: const Text('Masuk',
                       style: TextStyle(
                           fontSize: 16,
                       ),)

@@ -1,11 +1,12 @@
 import 'package:dapil_online/masuk.dart';
+import 'package:dapil_online/screens/login_screen.dart';
+import 'package:dapil_online/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
+import 'AdminLobby/adminlogin.dart';
 import 'daftar.dart';
 
-class LoginScreen extends StatelessWidget{
-  const LoginScreen({super.key});
+class Index extends StatelessWidget{
+  const Index({super.key});
 
 
   @override
@@ -14,7 +15,7 @@ class LoginScreen extends StatelessWidget{
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 70),
+              margin: const EdgeInsets.only(top: 70),
               height: 50,
               width: double.infinity,
               child: Column(
@@ -23,33 +24,34 @@ class LoginScreen extends StatelessWidget{
                       Container(
                           width: 70,
                           height: 30,
-                          margin: EdgeInsets.only(right: 15),
+                          margin: const EdgeInsets.only(right: 15),
                           decoration: BoxDecoration(
-                            border: Border.all(color: Color(0xff65A7E1)),
+                            border: Border.all(color: const Color(0xff65A7E1)),
                             borderRadius: BorderRadius.circular(5)
                           ),
                           child: TextButton(
-                            onPressed: (){},
+                            onPressed: (){Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => LoginScreen()));},
+                            style: const ButtonStyle(
+
+                            ),
                             child: Image.asset('assets/images/admin.png',
                             height: 20,
                             width: 50,),
-                            style: ButtonStyle(
-
-                            ),
                           ))
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               width: 300,
               height: 300,
               decoration: BoxDecoration(
-                color: Color(0xff65A7E1),
+                color: const Color(0xff65A7E1),
                 borderRadius: BorderRadius.circular(10),
-                boxShadow: [BoxShadow(
+                boxShadow: const [BoxShadow(
                   color: Colors.black26,
-                  offset: const Offset(
+                  offset: Offset(
                     2.0,
                     2.0,
                   ),
@@ -62,9 +64,9 @@ class LoginScreen extends StatelessWidget{
             Container(
               width: 200,
               height: 100,
-              margin: EdgeInsets.only(top: 30,bottom: 25),
+              margin: const EdgeInsets.only(top: 30,bottom: 25),
               child: Row(
-                children: [
+                children: const [
                   Expanded(
                     child: Text(
                       'KANCAPIL 2022',
@@ -72,7 +74,7 @@ class LoginScreen extends StatelessWidget{
                         fontSize: 24,
                         shadows: [Shadow(
                           color: Colors.black26,
-                          offset: const Offset(
+                          offset: Offset(
                             2.0,
                             2.0,
                           ),
@@ -87,9 +89,9 @@ class LoginScreen extends StatelessWidget{
             ),
             Container(
               width: 160,
-              margin: EdgeInsets.only(bottom: 25),
+              margin: const EdgeInsets.only(bottom: 25),
               child: Row(
-                children: [
+                children: const [
                   Expanded(
                     child: Text(
                       'Informasi Calon Anggota Legislatif 2022',
@@ -104,7 +106,7 @@ class LoginScreen extends StatelessWidget{
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 30),
+              margin: const EdgeInsets.only(top: 30),
               width: 304,
               height: 64,
               decoration: BoxDecoration(
@@ -120,15 +122,15 @@ class LoginScreen extends StatelessWidget{
                     child: TextButton(
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => const DaftarScreen()));},
-                      child: Text('Daftar'),
+                              builder: (context) => RegistrationScreen()));},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Color(0xffDFE6F0)),
-                      foregroundColor: MaterialStatePropertyAll(Colors.black),
+                      backgroundColor: const MaterialStatePropertyAll(Color(0xffDFE6F0)),
+                      foregroundColor: const MaterialStatePropertyAll(Colors.black),
                       shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15)))
                     ),
+                      child: const Text('Daftar'),
 
                     ),
                   ),
@@ -139,16 +141,16 @@ class LoginScreen extends StatelessWidget{
                     child: TextButton(
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => const LoginForm()));},
-                      child: Text('Masuk'),
+                              builder: (context) => LoginScreen()));},
                     style: ButtonStyle(
-                      backgroundColor: MaterialStatePropertyAll(Colors.white),
-                      foregroundColor: MaterialStatePropertyAll(Colors.black),
+                      backgroundColor: const MaterialStatePropertyAll(Colors.white),
+                      foregroundColor: const MaterialStatePropertyAll(Colors.black),
                         shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10)))
 
-                    ),),
+                    ),
+                      child: const Text('Masuk'),),
                   ),
 
                 ],

@@ -1,11 +1,10 @@
-
-
-
 import 'package:dapil_online/UserLobby/katalog.dart';
 import 'package:flutter/material.dart';
 
 class BerandaUser extends StatefulWidget{
-  const BerandaUser({super.key});
+  final String uname;
+  const BerandaUser({super.key, required this.uname});
+
 
   @override
   State<BerandaUser> createState() => _BerandaUserState();
@@ -28,14 +27,14 @@ class _BerandaUserState extends State<BerandaUser> {
             Image.asset('assets/images/logo_kpu.png',
             width: 50,
             height: 50,),
-            Text('KANCAPIL 2022',
+            const Text('KANCAPIL 2022',
             style: TextStyle(
               fontSize: 12,
               color: Colors.black,
               fontWeight: FontWeight.bold,
               shadows: [Shadow(
               color: Colors.black26,
-              offset: const Offset(
+              offset: Offset(
                 2.0,
                 2.0,
               ),
@@ -52,22 +51,22 @@ class _BerandaUserState extends State<BerandaUser> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              style: ButtonStyle(
+              style: const ButtonStyle(
               ),
               child: Container(
                 height: 100,
                   width: 300,
                   decoration: BoxDecoration(
-                    color: Color(0xff65A7E1),
+                    color: const Color(0xff65A7E1),
                     borderRadius: BorderRadius.circular(10)
                   ),
-                  child: Center(child: Text('Calon Anggota Legislatif',
+                  child: const Center(child: Text('Calon Anggota Legislatif',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16
                   ),))),
               onPressed: (){Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => Katalog()));},
+                  builder: (context) => const Katalog()));},
             ),
 
           ],
